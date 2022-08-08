@@ -135,7 +135,7 @@ nav{
 
 .enlaces-menu li{
     margin: 0;
-    padding: 3rem;
+    padding: 2.5rem;
     list-style-type: none;
     transition: 0.3s;
 }
@@ -413,7 +413,7 @@ main h2{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 2rem;
-    padding: 2rem 0;
+    padding: 2rem 0 3rem;
     background-color: var(--oscuro);
     border-top-left-radius: .8rem;
 }
@@ -533,14 +533,14 @@ main h2{
 /* Grid */
 
 main h1{
-    font-size: 3rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
 }
 
 .grid{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
-    padding: 2rem;
 }
 
 /* Productos */
@@ -549,7 +549,7 @@ main h1{
     padding: 1rem;
     background-color: var(--oscuro);
     min-width: 2.1rem;
-    border-radius: .5rem;
+    border-radius: 1rem;
 }
 
 .producto img{
@@ -557,7 +557,7 @@ main h1{
 }
 
 .producto__nombre{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: var(--secundario);
 }
 
@@ -570,13 +570,33 @@ main h1{
     line-height: 1.2;
 }
 
+@media (min-width: 480px) {
+    main h1{
+        font-size: 3rem;
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem;
+    }
+
+    .producto__nombre{
+        font-size: 1.6rem;
+    }
+}
+
 @media (min-width: 768px) {
     .grid{
         grid-template-columns: repeat(3, 1fr);
     }
 
+    .producto{
+        padding: 1.5rem 1.5rem 0;
+    }
+
     .producto__nombre{
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     main h1{
