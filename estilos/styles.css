@@ -1,11 +1,15 @@
 :root{
-    --blanco: #dfdfdf;
+    --blanco: #fafafa;
     --oscuro: #272635;
     /*--primario: #44906c;*/
-    --primario: #4ea06a;
+    --secundario: #4ea06a;
     /*--secundario: #c3de77;*/
-    --secundario: #92cc4d;
-    --gris: #CBCBD4;
+    --primario: #377556;
+    --gris: #939393;
+
+
+    --fuentePrincipal: 'Open Sans', sans-serif;
+    --fuente: 'Air Americana', sans-serif;
 }
 
 html{
@@ -20,7 +24,7 @@ html{
 
 body{
     font-size: 16px;
-    font-family: 'Krub', sans-serif;
+    font-family: var(--fuentePrincipal);                                           
     background-color: var(--blanco);
 }
 
@@ -49,7 +53,7 @@ main{
 
 .wspp:hover{
     text-decoration: none;
-    background: #fff;
+    background: #fafafa;
     stroke: #0df053;
 }
 
@@ -66,6 +70,11 @@ h2{
 
 h3{
     font-size: 2rem;
+}
+
+h4{
+    font-size: 1.4rem;
+    text-align: center;
 }
 
 
@@ -93,77 +102,114 @@ h3{
 /*Navegacion*/
 
 
-.nav-bg{    
-    background-color: var(--primario);    
-    border: .1rem solid var(--oscuro);
-    border-radius: .1rem;
+nav{    
+    background-color: var(--oscuro);    
+    /*border: .1rem solid var(--oscuro);  */  
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 8vh;
 }
 
-@media (min-width: 568px) {
-    .nav-bg{    
-    position: fixed;
-    width: 100%;
-    }
-}
+
 .logo{    
-    height: 60px;
-    width: 60px;
-    padding: .5rem;
+    position: absolute;
+    top: 7px;
+    left: 35px;
+    height: 6.2rem;
+    width: 6.2rem;
 }
 
-@media (max-width: 568px ) {
+.menu-icono{
+    display: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.enlaces-menu{
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.enlaces-menu li{
+    margin: 0;
+    padding: 3rem;
+    list-style-type: none;
+    transition: 0.3s;
+}
+
+.enlaces-menu li a{
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: var(--secundario);
+    font-weight: 600;
+}
+
+.enlaces-menu li:hover{
+    background-color: #323144;
+}
+
+.enlaces-menu li a:hover{
+    color: var(--blanco);
+}
+
+    /*Mobile*/
+
+@media (max-width: 768px) {
+    
     .logo{
-        margin: auto;
         height: 4.2rem;
         width: 4.2rem;
+        top: 10px;
     }
-}
 
-/*
-@media (min-width: 768px) {
+    .menu-icono{
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        right: 2.5rem;
+    }
+
     .nav-bg{
-        margin-top: .5rem;
-        border-radius: .5rem;
-    }   
-}
-*/
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2.5rem 0;
+    }
 
-.navegacion-principal{
-    display: flex;
-    flex-direction: column;
-}
-
-.navegacion-principal a{
-    display: block;
-    text-align: center;
-    font-weight: 700;
-    font-size: 1rem;
-    text-decoration: none;
-    color: var(--blanco);
-    padding: 1rem 1rem;
-}
-
-@media (min-width: 568px) {
-    .navegacion-principal{
-        flex-direction: row;
+    .enlaces-menu{
+        flex-direction: column;
         justify-content: space-evenly;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: none;
+        opacity: 0;
     }
-    .navegacion-principal a{
-        font-size: 2.2rem;
-        padding: 2rem 2rem;
+
+    .enlaces-menu li{
+        width: 100%;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    @keyframes muestraMenu{
+        from{opacity: 0;}
+        to{opacity: 1;}
+    }
+
+    .enlaces-menu.activado{
+        display: flex;
+        animation:muestraMenu 500ms ease-in-out both;
     }
 }
 
-.navegacion-principal a:hover{
-    background-color: var(--secundario);
-    color: var(--oscuro);
-}
+
 
 /*Banner*/
-
-.contenedor-hero{
-    
-}
 
 .hero{
     height: 45vw;
@@ -188,20 +234,20 @@ main h2{
 }
 
 .sombra{
-    -webkit-box-shadow: 0px 5px 15px 0px rgba(47,10,40,1);
-    -moz-box-shadow: 0px 5px 15px 0px rgba(47,10,40,1);
-    box-shadow: 0px 5px 15px 0px rgba(47,10,40,1);
+    -webkit-box-shadow: 0px 5px 15px 0px rgb(17, 17, 17);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(17,17,17,1);
+    box-shadow: 0px 5px 15px 0px rgba(17,17,17,1);
 
     border-radius: 1rem;
     padding: 2rem;
     
-    margin-bottom: 5rem;
+    margin: 3rem auto;
 }
 
 .shadow-icono{
-    -webkit-box-shadow: 0px 5px 15px 0px var(--secundario);
-    -moz-box-shadow: 0px 5px 15px 0px var(--secundario);
-    box-shadow: 0px 5px 15px 0px var(--secundario);
+    -webkit-box-shadow: 0px 5px 10px 0px var(--oscuro);
+    -moz-box-shadow: 0px 5px 10px 0px var(--oscuro);
+    box-shadow: 0px 5px 10px 0px var(--oscuro);
 
     border-radius: 1rem;
     padding: 2rem;
@@ -219,13 +265,7 @@ main h2{
     font-size: 1.2rem;
 }
 
-@media (min-width: 480px) {
-    .servicios{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        column-gap: 1rem;
-    }
-}
+
 
 .servicio{
     display: flex;
@@ -251,6 +291,20 @@ main h2{
     border-radius: 50%;
     justify-content: space-evenly;
     align-items: center;
+}
+
+@media (min-width: 680px) {
+    .servicios{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 1rem;
+    }
+}
+
+@media (max-width:580px) {
+    .sombra{
+        margin: 2rem;
+    }
 }
 
 /*Contacto*/
@@ -304,7 +358,7 @@ main h2{
 }
 
 .campo textarea{
-    width: min(480px, 100%);
+    width: min(580px, 100%);
     min-height: 20rem;
     max-height: 40rem;
 }    
@@ -353,3 +407,178 @@ main h2{
     color: var(--oscuro);
 }
 
+/*footer*/
+
+.footer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+    background-color: var(--oscuro);
+    border-top-left-radius: .8rem;
+}
+
+.footer-campos{
+    text-align: center;
+}
+
+.footer-campos h3{
+    font-size: 2.2rem;
+    color: var(--primario);
+}
+
+.footer-campos p{
+    font-size: 1.5rem;
+    color: var(--blanco);
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.icono-redes{
+    margin: 0 1.5rem;
+}
+
+@media (max-width: 580px) {
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-campos h3{
+        font-size: 1.6rem;
+    }
+
+    .footer-campos p{
+        font-size: 1.4rem;
+    }
+}
+
+/* 
+*****************************************************
+                    Nosotros 
+*****************************************************
+*/
+
+.nosotros{
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    margin: 0 2rem;
+}
+
+.nosotros__texto{   
+    font-size: 1.4rem;
+    text-align: justify; 
+}
+
+.nosotros__imagen{
+    grid-row: 1 / 2;
+    width: min(580px, 100%);
+    height: min(437px, 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nosotros img{
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .nosotros{
+        grid-template-columns: repeat(2, 1fr);        
+        column-gap: 2rem;
+    }
+
+    .nosotros__imagen{
+        grid-column:  2 / 3;
+    }
+}
+
+/* Bloques */
+
+.bloques{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.bloque{
+    text-align: center;
+}
+
+.bloque__titulo{
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .bloques{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .camisa{
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+
+    }
+}
+
+
+
+/* ############################## Productos ######################################## */
+
+
+/* Grid */
+
+main h1{
+    font-size: 3rem;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* Productos */
+
+.producto{
+    padding: 1rem;
+    background-color: var(--oscuro);
+    min-width: 2.1rem;
+    border-radius: .5rem;
+}
+
+.producto img{
+    width: 100%;
+}
+
+.producto__nombre{
+    font-size: 1.2rem;
+    color: var(--secundario);
+}
+
+
+.producto__nombre,
+.producto__especificaciones{
+    text-align: center;
+    font-family: var(--fuente);
+    margin: 1rem 0;
+    line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .producto__nombre{
+        font-size: 2.5rem;
+    }
+
+    main h1{
+        font-size: 4rem;
+    }
+}

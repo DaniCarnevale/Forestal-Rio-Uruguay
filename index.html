@@ -9,29 +9,39 @@
     <link rel="stylesheet" href="estilos/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/air-americana" rel="stylesheet">                
 
-    <link rel="preload" href="estilos/styles.css" as="style">
+    <!-- <link rel="preload" href="estilos/styles.css" as="style"> -->
     <link href="estilos/styles.css" rel="stylesheet" type="text/css">
-
-    <link rel="stylesheet" href="estilos/fontello.css">
 </head>
 
 <body>
     <div class="banner">
-        <div class="nav-bg">
-            <nav class="navegacion-principal">            
-                <img class="logo" src="img/logo.png" alt="logo svg">
-                <a href="#">Inicio</a>
-                <a href="#">Nosotros</a>
-                <a href="#">Productos</a>
-                <a href="#contacto">Contacto</a>
+            <nav> 
+                <a href="index.html">           
+                    <img class="logo" src="img/logo.png" alt="logo svg">
+                </a>
+
+                <ul class="enlaces-menu">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="/views/nosotros.html">Nosotros</a></li>
+                    <li><a href="/views/productos.html">Productos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="menu-icono icon icon-tabler icon-tabler-menu-2" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f3f3f3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <line x1="4" y1="6" x2="20" y2="6" />
+                    <line x1="4" y1="12" x2="20" y2="12" />
+                    <line x1="4" y1="18" x2="20" y2="18" />
+                </svg>
             </nav>
-        </div>
+        
 
         
         <div class="contenedor-hero">
-            <img class="hero"src="img/abc.jpg" alt="ru4">
+            <img class="hero"src="img/banner.jpg" alt="ru4">
         </div>
     </div>
 
@@ -53,8 +63,7 @@
                     </svg>
                 </div>
                 <p>
-                    Morbi condimentum risus tortor, sit amet pretium nisl imperdiet non. 
-                    Curabitur sed nibh semper, pellentesque odio sed, placerat magna.
+                    Todo lo que buscas, encontrarlo en un solo lugar. Acércate y encárganos tus materiales, o compra desde la comodidad de tu hogar viendo nuestro catálogo 
                 </p>
             </section>
 
@@ -68,8 +77,7 @@
                 </div>
 
                 <p>
-                    Morbi condimentum risus tortor, sit amet pretium nisl imperdiet non. 
-                    Curabitur sed nibh semper, pellentesque odio sed, placerat magna.
+                    Toda la línea en salamandras, súper modernas, para calefacción se tus espacios al mejor precio 
                 </p>
             </section>
             
@@ -86,8 +94,7 @@
                 </div>
 
                 <p>
-                    Morbi condimentum risus tortor, sit amet pretium nisl imperdiet non. 
-                    Curabitur sed nibh semper, pellentesque odio sed, placerat magna.
+                    No esperes horas para tener tus maderas cortadas a medida. Nosotros lo hacemos en el acto!
                 </p>
             </section>
         </div>
@@ -126,6 +133,45 @@
 
         </form>
     </main>
+
+    <footer class="footer">
+        
+        <section class="footer-campos">
+            <h3>Ubicacion</h3>
+            <p>Av. 9 N° 2828</p>
+            <p>Miramar - CP 7607 - Bs. As. Argentina</p>
+        </section>
+
+        
+        <section class="footer-campos">
+            <h3>Informacion</h3>
+            <p>Lunes a Viernes</p>
+            <p>De 8 a 12 hs. y de 14 a 18 hs.</p>
+            <p>0223-5487673</p>
+        </section>
+
+        
+        <section class="footer-campos">
+            <h3>Redes Sociales</h3>
+            <a href="https://www.facebook.com/Forestal-Rio-Uruguay-106808325284711" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icono-redes icon icon-tabler icon-tabler-brand-facebook" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fafafa" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                </svg>
+            </a>
+            
+            <a href="https://www.instagram.com/explore/locations/106808325284711/forestal-rio-uruguay/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icono-redes icon icon-tabler icon-tabler-brand-instagram" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fafafa" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <rect x="4" y="4" width="16" height="16" rx="4" />
+                    <circle cx="12" cy="12" r="3" />
+                    <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+                </svg>
+            </a>
+        </section>
+
+    </footer>
+
     <a class="wspp" href="https://api.whatsapp.com/send?phone=542291458342" class="btn-wsp" target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-whatsapp" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5"  fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -133,5 +179,7 @@
             <path d="M9 10a0.5 .5 0 0 0 1 0v-1a0.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a0.5 .5 0 0 0 0 -1h-1a0.5 .5 0 0 0 0 1" />
     </svg>
     </a>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
